@@ -4,7 +4,7 @@ This repository for go-lang tutorials.
 ## Tutorials
 - [Go Language Dasar](https://github.com/gusrylmubarok/learn-go-lang-demo/tree/main/go-basic)
 - [Go Language Modules](https://github.com/gusrylmubarok/learn-go-lang-demo/tree/main/go-modules)
-- [Go Language Unit Test]()
+- [Go Language Unit Test](https://github.com/gusrylmubarok/learn-go-lang-demo/tree/main/go-unit-test)
 - [Go Language Goroutines]()
 - [Go Language Context Bahasa]()
 - [Go Language MySQL]()
