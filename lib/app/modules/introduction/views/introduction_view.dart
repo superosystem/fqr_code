@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-
-import '../../../routes/app_pages.dart';
-import '../controllers/introduction_controller.dart';
+import 'package:moslem/app/modules/introduction/controllers/introduction_controller.dart';
+import 'package:moslem/app/routes/app_pages.dart';
 
 class IntroductionView extends GetView<IntroductionController> {
   const IntroductionView({Key? key}) : super(key: key);
@@ -29,6 +28,7 @@ class IntroductionView extends GetView<IntroductionController> {
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: Text(
                 "Alhamdulillah for Everything",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
                   fontStyle: FontStyle.italic,

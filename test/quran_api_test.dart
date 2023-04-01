@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
-import 'package:moslem/app/data/models/quran/ayah.dart';
+import 'package:moslem/app/data/models/quran/detail_surah.dart';
 
 void main() {
   test('should call surah api endpoint', () async {
@@ -19,7 +19,7 @@ void main() {
     Uri url = Uri.parse('https://api.quran.gading.dev/surah/114');
     var req = await http.get(url);
     var body = (json.decode(req.body) as Map<String, dynamic>)["data"];
-     Ayah annas = Ayah.fromJson(body);
+     DetailSurah annas = DetailSurah.fromJson(body);
 
     expect(body, isNot(null));
     expect(annas.number, 114);

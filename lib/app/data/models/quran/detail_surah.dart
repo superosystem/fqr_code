@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-Ayah ayahFromJson(String str) => Ayah.fromJson(json.decode(str));
+DetailSurah ayahFromJson(String str) => DetailSurah.fromJson(json.decode(str));
 
-String ayahToJson(Ayah data) => json.encode(data.toJson());
+String ayahToJson(DetailSurah data) => json.encode(data.toJson());
 
-class Ayah {
-  Ayah({
+class DetailSurah {
+  DetailSurah({
     required this.number,
     required this.sequence,
     required this.numberOfVerses,
@@ -22,17 +22,17 @@ class Ayah {
   Name name;
   Revelation revelation;
   AyahTafsir tafsir;
-  PreBismillah preBismillah;
+  PreBismillah? preBismillah;
   List<Verse> verses;
 
-  factory Ayah.fromJson(Map<String, dynamic> json) => Ayah(
+  factory DetailSurah.fromJson(Map<String, dynamic> json) => DetailSurah(
         number: json["number"],
         sequence: json["sequence"],
         numberOfVerses: json["numberOfVerses"],
         name: Name.fromJson(json["name"]),
         revelation: Revelation.fromJson(json["revelation"]),
         tafsir: AyahTafsir.fromJson(json["tafsir"]),
-        preBismillah: PreBismillah.fromJson(json["preBismillah"]),
+        preBismillah: json["preBismillah"] == null ? null : PreBismillah.fromJson(json["preBismillah"]),
         verses: List<Verse>.from(json["verses"].map((x) => Verse.fromJson(x))),
       );
 
@@ -43,7 +43,7 @@ class Ayah {
         "name": name.toJson(),
         "revelation": revelation.toJson(),
         "tafsir": tafsir.toJson(),
-        "preBismillah": preBismillah.toJson(),
+        "preBismillah": preBismillah?.toJson(),
         "verses": List<dynamic>.from(verses.map((x) => x.toJson())),
       };
 }
