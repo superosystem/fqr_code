@@ -1,4 +1,3 @@
-# moslem
+# fqr_code
 
-Moslem Application
-
+Example QR Code application

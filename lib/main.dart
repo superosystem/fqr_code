@@ -7,8 +7,8 @@ import 'app/routes/app_pages.dart';
 void main() {
   runApp(
     GetMaterialApp(
-      title: "Application",
-      initialRoute: AppPages.INITIAL,
+      title: "FQR Code",
+      initialRoute: AppPages.initial,
       getPages: AppPages.routes,
     ),
   );

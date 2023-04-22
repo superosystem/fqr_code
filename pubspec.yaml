@@ -1,15 +1,13 @@
-name: moslem
-version: 1.0.0+1
+name: fqr_code
+version: 1.0.0
 publish_to: none
-description: Moslem Application
+description: Example QR Code application
 environment: 
-  sdk: '>=2.19.4 <3.0.0'
+  sdk: '>=2.19.6 <3.0.0'
 
 dependencies: 
   cupertino_icons: ^1.0.2
   get: 4.6.5
-  http: 0.13.5
-  lottie: 2.3.1
   flutter: 
     sdk: flutter
 
@@ -20,6 +18,4 @@ dev_dependencies:
 
 flutter: 
   uses-material-design: true
-  assets:
-    - assets/lotties/
 

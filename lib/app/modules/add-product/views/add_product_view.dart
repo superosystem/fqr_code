@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/home_controller.dart';
+import '../controllers/add_product_controller.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+class AddProductView extends GetView<AddProductController> {
+  const AddProductView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeView'),
+        title: const Text('AddProductView'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'HomeView is working',
+          'AddProductView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

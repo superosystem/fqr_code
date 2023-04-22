@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gusrylmubarok.moslem.moslem">
+    package="com.gusrylmubarok.fqr_code.fqr_code">
    <application
-        android:label="moslem"
+        android:label="fqr_code"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
