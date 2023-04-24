@@ -15,12 +15,12 @@ class AddProductController extends GetxController {
 
       return {
         "error": false,
-        "message": "Success, new product added",
+        "message": "New product has been added",
       };
     } catch (e) {
       return {
         "error": true,
-        "message": "Failed, product not added $e",
+        "message": "Product can not add, $e",
       };
     }
   }

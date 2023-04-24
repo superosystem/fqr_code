@@ -72,14 +72,25 @@ class LoginView extends GetView<LoginController> {
                         await authC.login(emailC.text, passwordC.text);
                     controller.isLoading(false);
                     if (result["error"] == true) {
-                      Get.snackbar("ERROR", result["message"]);
+                      Get.snackbar(
+                        "ERROR",
+                        result["message"],
+                        duration: const Duration(seconds: 2),
+                      );
                     } else {
                       Get.offAllNamed(Routes.home);
-                      Get.snackbar("SUCCESS", result["message"]);
+                      Get.snackbar(
+                        "SUCCESS",
+                        result["message"],
+                        duration: const Duration(seconds: 2),
+                      );
                     }
                   } else {
                     Get.snackbar(
-                        "ERROR", "email and password can not be empty");
+                      "ERROR",
+                      "Email and Password can not be empty",
+                      duration: const Duration(seconds: 2),
+                    );
                   }
                 }
               },

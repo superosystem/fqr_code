@@ -21,7 +21,7 @@ class AuthController extends GetxController {
     } catch (e) {
       return {
         "error": true,
-        "message": "You are can not login",
+        "message": "You can not login",
       };
     }
   }
@@ -42,7 +42,7 @@ class AuthController extends GetxController {
     } catch (e) {
       return {
         "error": true,
-        "message": "You are can not logout",
+        "message": "You can not logout",
       };
     }
   }

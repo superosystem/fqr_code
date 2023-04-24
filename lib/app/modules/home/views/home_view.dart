@@ -44,16 +44,12 @@ class HomeView extends GetView<HomeController> {
             case 2:
               title = "QR Code";
               icon = Icons.qr_code;
-              onTap = () => {
-                printInfo(info: "OPEN CAMERA")
-              };
+              onTap = () => {printInfo(info: "OPEN CAMERA")};
               break;
             case 3:
               title = "View Catalog";
               icon = Icons.document_scanner_outlined;
-              onTap = () => {
-                printInfo(info: "OPEN PDF")
-              };
+              onTap = () => {printInfo(info: "OPEN PDF")};
               break;
             default:
           }
@@ -88,9 +84,17 @@ class HomeView extends GetView<HomeController> {
           Map<String, dynamic> result = await authC.logout();
           if (result["error"] == false) {
             Get.offAllNamed(Routes.login);
-            Get.snackbar("ERROR", result["message"]);
+            Get.snackbar(
+              "ERROR",
+              result["message"],
+              duration: const Duration(seconds: 2),
+            );
           } else {
-            Get.snackbar("ERROR", result["message"]);
+            Get.snackbar(
+              "ERROR",
+              result["message"],
+              duration: const Duration(seconds: 2),
+            );
           }
         },
         child: const Icon(Icons.logout),

@@ -68,16 +68,27 @@ class AddProductView extends GetView<AddProductController> {
                     "name": nameC.text,
                     "qty": int.tryParse(qtyC.text) ?? 0,
                   });
-                  print(result);
                   controller.isLoading(false);
                   if (result["error"] == true) {
-                    Get.snackbar("ERROR", result["message"]);
+                    Get.snackbar(
+                      "ERROR",
+                      result["message"],
+                      duration: const Duration(seconds: 2),
+                    );
                   } else {
                     Get.offAllNamed(Routes.home);
-                    Get.snackbar("SUCCESS", result["message"]);
+                    Get.snackbar(
+                      "SUCCESS",
+                      result["message"],
+                      duration: const Duration(seconds: 2),
+                    );
                   }
                 } else {
-                  Get.snackbar("ERROR", "All field should not be empty");
+                  Get.snackbar(
+                    "ERROR",
+                    "All field should not be empty",
+                    duration: const Duration(seconds: 2),
+                  );
                 }
               }
             },
