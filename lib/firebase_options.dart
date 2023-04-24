@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '106940522081',
     projectId: 'fqr-code',
     storageBucket: 'fqr-code.appspot.com',
-    iosClientId: '106940522081-h128ujecbb9p36mhg4si70mcnquhelh3.apps.googleusercontent.com',
+    iosClientId:
+        '106940522081-h128ujecbb9p36mhg4si70mcnquhelh3.apps.googleusercontent.com',
     iosBundleId: 'com.gusrylmubarok.fqrcode.fqrCode',
   );
 }

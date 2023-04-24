@@ -7,6 +7,14 @@ class AddProductController extends GetxController {
 
   Future<Map<String, dynamic>> addProduct(Map<String, dynamic> data) async {
     try {
+      var foundDuplicate = await db.collection("products").where("code", isEqualTo: data["code"]).get();
+      if(foundDuplicate.docs.isNotEmpty) {
+        return {
+          "error": true,
+          "message": "Product can not add, cause product code is used",
+        };
+      }
+
       var result = await db.collection("products").add(data);
       await db
           .collection("products")

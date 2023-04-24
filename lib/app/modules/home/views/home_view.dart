@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:get/get.dart';
 
 import '../../../controllers/auth_controller.dart';
@@ -44,12 +45,31 @@ class HomeView extends GetView<HomeController> {
             case 2:
               title = "QR Code";
               icon = Icons.qr_code;
-              onTap = () => {printInfo(info: "OPEN CAMERA")};
+              onTap = () async {
+                String qrCode = await FlutterBarcodeScanner.scanBarcode(
+                  "#000000",
+                  "Cancel",
+                  true,
+                  ScanMode.QR,
+                );
+
+                Map<String, dynamic> result =
+                    await controller.getProductById(qrCode);
+                if (result["error"] == false) {
+                  Get.toNamed(Routes.detailProduct, arguments: result["data"]);
+                } else {
+                  Get.snackbar(
+                    "ERROR",
+                    result["message"],
+                    duration: const Duration(seconds: 2),
+                  );
+                }
+              };
               break;
             case 3:
               title = "View Catalog";
               icon = Icons.document_scanner_outlined;
-              onTap = () => {printInfo(info: "OPEN PDF")};
+              onTap = () => {controller.exportCatalogToPDF()};
               break;
             default:
           }

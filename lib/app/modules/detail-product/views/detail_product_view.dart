@@ -22,7 +22,7 @@ class DetailProductView extends GetView<DetailProductController> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('DETAIL PRODUCT'),
+        title: const Text('PRODUCT DETAIL'),
         centerTitle: true,
       ),
       body: ListView(

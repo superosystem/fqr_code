@@ -14,12 +14,24 @@ dependencies:
   firebase_auth: ^4.4.2
   cloud_firestore: ^4.5.2
   qr_flutter: ^4.0.0
+  open_file: ^3.2.1
+  path_provider: ^2.0.14
+  pdf: ^3.6.4
+  google_fonts: ^4.0.3
+  flutter_barcode_scanner: ^2.0.0
+  intl: ^0.17.0
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
   flutter_test: 
     sdk: flutter
 
-flutter: 
+flutter:
+  assets:
+    - assets/OpenSans-Regular.ttf
+    - assets/OpenSans-Bold.ttf
+    - assets/OpenSans-Italic.ttf
+    - assets/OpenSans-BoldItalic.ttf
   uses-material-design: true
+
 

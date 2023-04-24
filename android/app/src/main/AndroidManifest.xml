@@ -7,7 +7,7 @@
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:label="fqr_code"
+        android:label="FQR Code"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
