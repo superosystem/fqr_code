@@ -56,7 +56,8 @@ class LoginView extends GetView<LoginController> {
                         : Icons.remove_red_eye_outlined),
                   ),
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(9)),
+                    borderRadius: BorderRadius.circular(9),
+                  ),
                 ),
               ),
             ),
@@ -74,6 +75,7 @@ class LoginView extends GetView<LoginController> {
                       Get.snackbar("ERROR", result["message"]);
                     } else {
                       Get.offAllNamed(Routes.home);
+                      Get.snackbar("SUCCESS", result["message"]);
                     }
                   } else {
                     Get.snackbar(
@@ -83,13 +85,14 @@ class LoginView extends GetView<LoginController> {
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(9)),
+                    borderRadius: BorderRadius.circular(9),
+                  ),
                   padding: const EdgeInsets.symmetric(vertical: 20)),
               child: Obx(
                 () =>
                     Text(controller.isLoading.isFalse ? "LOGIN" : "LOADING..."),
               ),
-            )
+            ),
           ],
         ),
       ),
